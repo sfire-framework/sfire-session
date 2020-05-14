@@ -1,0 +1,29 @@
+{
+    "name": "sfire-framework/sfire-session",
+    "homepage": "https://sfire.io",
+    "description": "Wrapper class for working with PHP sessions",
+    "keywords": [
+        "sfire",
+        "framework",
+        "sessions"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Kris Kuiper",
+            "email": "kris@sfire.io"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "sfire-framework/sfire-datacontrol": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "sFire\\Session\\": "./src/"
+        }
+    }
+}
