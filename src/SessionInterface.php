@@ -19,68 +19,68 @@ namespace sFire\Session;
 interface SessionInterface {
 
 
-	/**
-	 * Stores a new piece of data and tries to merge the data if already exists
-	 * @param string|array $key
-	 * @param mixed $value
-	 * @return bool if value has been set
-	 */
-	public function add($key, $value);
-
-	
-	/**
-	 * Stores a new piece of data and overwrites the data if already exists
-	 * @param mixed $key
-	 * @param mixed $value
-	 * @return void
-	 */
-	public function set($key, $value): void;
+    /**
+     * Stores a new piece of data and tries to merge the data if already exists
+     * @param string|array $key
+     * @param mixed $value
+     * @return bool if value has been set
+     */
+    public function add($key, $value);
 
 
-	/**
-	 * Check if an item exists
-	 * @param mixed $key
-	 * @return bool
-	 */
-	public function has($key): bool;
+    /**
+     * Stores a new piece of data and overwrites the data if already exists
+     * @param mixed $key
+     * @param mixed $value
+     * @return void
+     */
+    public function set($key, $value): void;
 
 
-	/**
-	 * Deletes all data
-	 * @return void
-	 */
-	public function flush(): void;
+    /**
+     * Check if an item exists
+     * @param mixed $key
+     * @return bool
+     */
+    public function has($key): bool;
 
 
-	/**
-	 * Remove data based on key
-	 * @param mixed $key
-	 * @return void
-	 */
-	public function remove($key): void;
+    /**
+     * Deletes all data
+     * @return void
+     */
+    public function flush(): void;
 
 
-	/**
-	 * Retrieve data based on key. Returns $default if not exists
-	 * @param mixed $key
-	 * @param mixed $default A default value which will be returned if the key is not found
-	 * @return mixed
-	 */
-	public function get($key, $default = null);
+    /**
+     * Remove data based on key
+     * @param mixed $key
+     * @return void
+     */
+    public function remove($key): void;
 
 
-	/**
-	 * Retrieve and delete an item. Returns $default if not exists
-	 * @param string|array $key
-	 * @param mixed $default A default value which will be returned if the key is not found
-	 * @return mixed
-	 */
-	public function pull($key, $default = null);
+    /**
+     * Retrieve data based on key. Returns $default if not exists
+     * @param mixed $key
+     * @param mixed $default A default value which will be returned if the key is not found
+     * @return mixed
+     */
+    public function get($key, $default = null);
 
 
-	/**
-	 * Retrieve all stored data
-	 * @return mixed
-	 */
-	public function all();
+    /**
+     * Retrieve and delete an item. Returns $default if not exists
+     * @param string|array $key
+     * @param mixed $default A default value which will be returned if the key is not found
+     * @return mixed
+     */
+    public function pull($key, $default = null);
+
+
+    /**
+     * Retrieve all stored data
+     * @return mixed
+     */
+    public function all();
 }
